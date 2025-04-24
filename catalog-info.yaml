@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: lm8w3fz9o-python-gitops
+  description: This is GitOps manifest for lm8w3fz9o-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=lm8w3fz9o-python
+    backstage.io/kubernetes-id: lm8w3fz9o-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: lm8w3fz9o-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:lm8w3fz9o-python
